@@ -62,8 +62,8 @@ class Library:
     def get_index_by_book_id(self, id_: int):
         """Метод, возвращающий индекс книги в списке, который хранится в атрибуте экземпляра класса"""
         for i, book in enumerate(self.books):
-            if book.id == id_:
-                return 1
+            if book.id_ == id_:
+                return 0
         raise ValueError("Книги с запрашиваемым id не существует")
 
 
