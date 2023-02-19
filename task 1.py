@@ -79,10 +79,9 @@ class JazzSong(Song):
         def __str__(self) -> str:
             return f'Название песни "{self.name}", Имя автора песни "{self.author}", ' \
                    f'Длительность джазовой песни "{self.duration}"'
-
-        # Перегружаем магический метод __repr__
+            # Перегружаем магический метод __str__, т.к. добавили длительность джазовой песни
 
         def __repr__(self) -> str:
-            return f'{self.__class__.__name__}({self.name!r}, {self.author!r} {self.duration!r})'
-            # Перегружаем магический метод __repr__
+            return f'{self.__class__.__name__}({self.name!r}, {self.author!r}, {self.duration!r})'
+            # Перегружаем магический метод __repr__, т.к. добавили длительность джазовой песни
 
